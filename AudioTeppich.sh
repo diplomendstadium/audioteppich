@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# AudioTeppich Version 1.0
+# AudioTeppich Version 1.1
 # CC BY-NC-SA 4.0 Deed
 # https://github.com/diplomendstadium/audioteppich
+# Podcastlinks von: https://fyyd.de/
 
 # Stellen Sie sicher, dass die notwendigen Ordner existieren
 mkdir -p 1_rohdaten 2_snippets 3_mixfiles
@@ -86,7 +87,7 @@ inputDir="2_snippets"
 outputDir="3_mixfiles"
 
 # Anzahl der Durchläufe
-runs=60
+runs=500
 
 for ((i=1; i<=runs; i++)); do
     # Generiert einen zufälligen Dateinamen für die Ausgabedatei
@@ -134,4 +135,3 @@ rm concat.txt
 rm -r "2_snippets" "3_mixfiles"
 
 echo "Der Vorgang wurde abgeschlossen. Die finale Audiodatei ist: $outputFile"
-
